@@ -1,20 +1,10 @@
 import datetime
-import random
 from django.db import models
 from django.utils import timezone
 from django.core.validators import int_list_validator
 
 
-def random_color():
-    return tuple([
-        random.randint(0, 255),
-        random.randint(0, 255),
-        random.randint(0, 255),
-        0.4
-    ])
-
-
-class Vote(models.Model):
+class Article(models.Model):
     """
     gender field:
     0 - Male
@@ -28,11 +18,8 @@ class Vote(models.Model):
     2 - Over 30 Under 50
     3 - 50+
     """
-    opinion_list = models.CharField("Meinung", validators=[int_list_validator(allow_negative=True)], max_length=300)
-    age_group = models.IntegerField("Alter", default=-1)
-    gender = models.IntegerField("Geschlecht", default=0)
+
     pub_date = models.DateTimeField("Datum", default=timezone.now)
-    color = models.CharField("Projektfarbe", default=random_color, max_length=100)
 
     def was_published_recently(self):
         now = timezone.now()

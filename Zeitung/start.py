@@ -1,3 +1,3 @@
 import os
 import sys
-from PollZ.wsgi import application
+from appcore.wsgi import application

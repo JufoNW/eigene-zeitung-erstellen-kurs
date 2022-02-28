@@ -10,16 +10,16 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@*l$-tc+=b6%p9u6501-ty)7(qr6y!lwj0vmw+h@bs4q)(fc*_'
+SECRET_KEY = ',.-42qwd3,-.23,6.-23fdhwewqb,32-.,3,1-wqwqd.,21^-.2^1,d1wqd2d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pollz.kpw-app.xyz', 'kpw-app.xyz', 'www.kpw-app.xyz', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = '/account/login'
+LOGIN_URL = '/account/login/'
 
 # Application definition
 
@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'markdownify',
-    'PollZ',
+    'appcore',
     'fontawesomefree'
 ]
 
@@ -45,7 +45,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PollZ.urls'
+ROOT_URLCONF = 'appcore.urls'
 HTDOCS_DIR = os.path.join(CORE_DIR, "htdocs")
 
 TEMPLATES = [
@@ -108,7 +108,7 @@ MARKDOWNIFY = {
   }
 }
 
-WSGI_APPLICATION = 'PollZ.wsgi.application'
+WSGI_APPLICATION = 'appcore.wsgi.application'
 
 MEDIA_ROOT = f"{BASE_DIR}/static/images/"
 
@@ -157,7 +157,6 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
 

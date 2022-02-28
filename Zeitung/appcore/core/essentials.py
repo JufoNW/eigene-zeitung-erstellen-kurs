@@ -6,7 +6,7 @@ from django.template import loader
 from django import template
 
 
-def pages(request):
+def page_handler(request):
     """
     Page Handler
     Serves STATICS and handles errors
