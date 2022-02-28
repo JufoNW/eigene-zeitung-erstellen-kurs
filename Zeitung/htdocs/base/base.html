@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="de">
+	<head>
+	<!--===============================================================================================-->
+		<title>
+    	    Titel deiner Website
+    	</title>
+	<!--===============================================================================================-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta http-equiv="content-language" content="de">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image" />
+    <!--================================Info Tags die man ändern sollte================================-->
+        <meta property="og:title" content="Hier einen Titel eingeben, wird auf Google angezeigt">
+        <meta name="description" content="Hier eine Beschreibung eingeben, wird auf Google angezeigt">
+        <meta property="og:description" content="Hier eine Beschreibung eingeben, wird auf Google angezeigt">
+        <meta name="keywords" content="Hier Keywords reinschreiben, mit Komma trennen">
+        <meta property="og:image" content="/static/images/thumbnail.png">
+        <meta name="twitter:image:src" content="/static/images/thumbnail.png" />
+        <meta name="audience" content="zB Journalisten">
+        <meta property="og:url" content="Hier URL eingeben auf die Googles Main Title verweisen soll, e.g https://deine.website.com">
+
+        <meta name="publisher" content="Name des Produkts">
+        <meta name="author" content="Yann Berton">
+	<!--===============================================================================================-->
+        {% load static %}
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+        <script src="https://kit.fontawesome.com/f890ad0835.js" crossorigin="anonymous"></script>
+	<!--===============================================================================================-->
+	</head>
+	<body>
+        {% include "includes/navbar.html" %}
+
+        {% block content %}{% endblock content %}
+
+        {% include "includes/footer.html" %}
+
+        <!--===============================================================================================-->
+            <script type="text/javascript" src="/static/js/main.js"></script>
+        <!--===============================================================================================-->
+
+        {% block javascripts %}{% endblock javascripts %}
+	</body>
+</html>
